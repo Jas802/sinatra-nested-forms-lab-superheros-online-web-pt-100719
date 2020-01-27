@@ -6,7 +6,7 @@ class App < Sinatra::Base
   end
     set :views, Proc.new { File.join(root, "../views/") }
 
-    ost '/teams' do
+    post '/teams' do
     @team_name = params[:team][:name]
     @team_motto = params[:team][:motto]
     @hero_name = []
